@@ -1,5 +1,5 @@
 .container {
-    max-width: 1200px;
+    max-width: $tablet-max-width;
     margin: 0 auto;
     padding: 0 16px;
     align-items: center;
@@ -13,12 +13,16 @@
     font-family: Arial, sans-serif;
 }
 thead{
+    position: sticky;
+    top: 5px;
+    background-color: #fff;
     th {
-        padding: 12px 16px;
+        padding: 20px;
         font-size: 14px;
         font-weight: 600;
         text-align: left;
         border-bottom: 2px solid #e9ecef;
+        cursor: pointer
     }
 }
 
@@ -30,8 +34,8 @@ tbody{
           }
     }
     td{
-        padding: 12px 16px;
-        border: 1px solid #ddd;
+        padding: 20px;
+        border-top: 1px solid #ddd;
         font-size: 14px;
     }
     .coin {
@@ -54,5 +58,18 @@ tbody{
           margin-left: 8px;
           font-size: 10px;
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .container{
+        max-width: 400px;
+        display: flex;
+        align-items: center;
     }
 }
